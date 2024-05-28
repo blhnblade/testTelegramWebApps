@@ -25,18 +25,25 @@ const data = JSON.stringify({
     //     // Например, вы можете закрыть Web App или перейти на предыдущую страницу
     // });
     const container = document.querySelector('#block')
-    
+
     const WebApp = window.Telegram.WebApp
     var BackButton = WebApp.BackButton;
     BackButton.show();
     BackButton.onClick(function() {
-        window.history.back();
+        // window.history.back();
         WebApp.showAlert("Нет пути назад!");
         const div = document.createElement('div')
         div.innerText = Date.now()
         container.append(div)
         container.style.backgroundColor = `#fff`
     });
+
+    window.addEventListener('click', ()=>{
+        const div = document.createElement('div')
+        div.innerText = Date.now()
+        container.append(div)
+        container.style.backgroundColor = `#fff`
+    })
     
 
     // BackButton.onClick(() => {
