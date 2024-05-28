@@ -36,11 +36,15 @@ window
     BackButton.show();
     BackButton.onClick(function() {
     WebApp.showAlert("Нет пути назад!");
-    BackButton.hide();
+        const div = document.createElement('div')
+        div.innerText = Date.now()
+        document.body.append(div)
+        document.body.style.backgroundColor = `#fff`
     });
     WebApp.onEvent('backButtonClicked', function() {
         const div = document.createElement('div')
         div.innerText = Date.now()
         document.body.append(div)
+        document.body.style.backgroundColor = `#fff`
     });
 }
