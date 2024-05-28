@@ -1,13 +1,24 @@
 const div = document.createElement('div')
-        div.innerText = JSON.stringify(window.Telegram.WebApp)
-        document.body.append(div)
+div.innerText = JSON.stringify(window.Telegram.WebApp)
+document.body.append(div)
 
-        window.addEventListener('click', ()=>{
-            const div = document.createElement('div')
-            div.innerText = Date.now()
-            container.append(div)
-            container.style.backgroundColor = `#fff`
-        })
+const container = document.querySelector('#block')
+
+
+window.addEventListener('click', ()=>{
+    const div = document.createElement('div')
+    div.innerText = Date.now()
+    container.append(div)
+    container.style.backgroundColor = `#fff`
+})
+
+const btn =  document.querySelector('#btn')
+btn.addEventListener('click', () => {
+    const div = document.createElement('div')
+    div.innerText = Date.now()
+    container.append(div)
+    container.style.backgroundColor = `#fff`
+})
 
 if (window.Telegram.WebApp) {
 // const data = JSON.stringify({
@@ -31,7 +42,7 @@ if (window.Telegram.WebApp) {
     //     // Ваша логика здесь
     //     // Например, вы можете закрыть Web App или перейти на предыдущую страницу
     // });
-    const container = document.querySelector('#block')
+    
 
     const WebApp = window.Telegram.WebApp
     var BackButton = WebApp.BackButton;
