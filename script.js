@@ -4,9 +4,9 @@ const container = document.querySelector('#block')
 const WebApp = window.Telegram.WebApp
 // document.body.appendChild = JSON.stringify(window.Telegram.WebApp)
 WebApp.onEvent('backButtonClicked', function() {
-    window.history.back();
+    // window.history.back();
     const div = document.createElement('div')
     div.innerText = 'Была нажата кнопка назад'
-    document.body.append(div)
-    document.body.style.backgroundColor = `#fff`
+    container.append(div)
+    container.style.backgroundColor = `#fff`
 });

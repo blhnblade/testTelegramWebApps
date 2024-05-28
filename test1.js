@@ -30,8 +30,8 @@ if (window.Telegram.WebApp) {
     var BackButton = WebApp.BackButton;
     BackButton.show();
     BackButton.onClick(function() {
-        // window.history.back();
-        WebApp.showAlert("Нет пути назад!");
+        window.history.back();
+        // WebApp.showAlert("Нет пути назад!");
         const div = document.createElement('div')
         div.innerText = Date.now()
         container.append(div)
@@ -39,6 +39,13 @@ if (window.Telegram.WebApp) {
     });
 
     window.addEventListener('click', ()=>{
+        const div = document.createElement('div')
+        div.innerText = Date.now()
+        container.append(div)
+        container.style.backgroundColor = `#fff`
+    })
+
+    window.addEventListener('touchstart', ()=>{
         const div = document.createElement('div')
         div.innerText = Date.now()
         container.append(div)
