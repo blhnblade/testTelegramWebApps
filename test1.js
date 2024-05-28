@@ -28,13 +28,15 @@ const data = JSON.stringify({
     var BackButton = WebApp.BackButton;
     BackButton.show();
     BackButton.onClick(function() {
-    WebApp.showAlert("Нет пути назад!");
+        history.back();
+        WebApp.showAlert("Нет пути назад!");
         const div = document.createElement('div')
         div.innerText = Date.now()
         document.body.append(div)
         document.body.style.backgroundColor = `#fff`
     });
     WebApp.onEvent('backButtonClicked', function() {
+        history.back();
         const div = document.createElement('div')
         div.innerText = Date.now()
         document.body.append(div)
