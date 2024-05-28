@@ -1,3 +1,7 @@
+const div = document.createElement('div')
+        div.innerText = JSON.stringify(window.Telegram.WebApp)
+        document.body.append(div)
+
 if (window.Telegram.WebApp) {
 const data = JSON.stringify({
     eventType: 'web_app_setup_back_button',
@@ -21,7 +25,9 @@ window
     // Обработчик события нажатия кнопки "Назад"
     Telegram.WebApp.onEvent('backButtonPressed', function() {
         console.log('Кнопка "Назад" нажата');
-        alert('Press')
+        const div = document.createElement('div')
+        div.innerText = Date.now()
+        document.body.append(div)
         // Ваша логика здесь
         // Например, вы можете закрыть Web App или перейти на предыдущую страницу
     });
