@@ -24,7 +24,7 @@ const data = JSON.stringify({
     //     // Ваша логика здесь
     //     // Например, вы можете закрыть Web App или перейти на предыдущую страницу
     // });
-
+    const WebApp = window.Telegram.WebApp
     var BackButton = WebApp.BackButton;
     BackButton.show();
     BackButton.onClick(function() {
