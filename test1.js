@@ -19,16 +19,28 @@ window
   .TelegramWebviewProxy
   .postEvent('web_app_setup_back_button', data1);
 
-    // Включаем кнопку "Назад"
-    Telegram.WebApp.BackButton.show();
+    // // Включаем кнопку "Назад"
+    // Telegram.WebApp.BackButton.show();
 
-    // Обработчик события нажатия кнопки "Назад"
-    Telegram.WebApp.onEvent('backButtonPressed', function() {
-        console.log('Кнопка "Назад" нажата');
+    // // Обработчик события нажатия кнопки "Назад"
+    // Telegram.WebApp.onEvent('backButtonPressed', function() {
+    //     console.log('Кнопка "Назад" нажата');
+    //     const div = document.createElement('div')
+    //     div.innerText = Date.now()
+    //     document.body.append(div)
+    //     // Ваша логика здесь
+    //     // Например, вы можете закрыть Web App или перейти на предыдущую страницу
+    // });
+
+    var BackButton = WebApp.BackButton;
+    BackButton.show();
+    BackButton.onClick(function() {
+    WebApp.showAlert("Нет пути назад!");
+    BackButton.hide();
+    });
+    WebApp.onEvent('backButtonClicked', function() {
         const div = document.createElement('div')
         div.innerText = Date.now()
         document.body.append(div)
-        // Ваша логика здесь
-        // Например, вы можете закрыть Web App или перейти на предыдущую страницу
     });
 }
