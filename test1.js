@@ -47,4 +47,13 @@ window
         document.body.append(div)
         document.body.style.backgroundColor = `#fff`
     });
+
+    BackButton.onClick(() => {
+        history.back();
+        const div = document.createElement('div')
+        div.innerText = Date.now()
+        document.body.append(div)
+        document.body.style.backgroundColor = `#fff`
+    });
+  
 }
