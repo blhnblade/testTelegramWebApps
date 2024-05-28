@@ -2,6 +2,13 @@ const div = document.createElement('div')
         div.innerText = JSON.stringify(window.Telegram.WebApp)
         document.body.append(div)
 
+        window.addEventListener('click', ()=>{
+            const div = document.createElement('div')
+            div.innerText = Date.now()
+            container.append(div)
+            container.style.backgroundColor = `#fff`
+        })
+
 if (window.Telegram.WebApp) {
 // const data = JSON.stringify({
 //     eventType: 'web_app_setup_back_button',
@@ -38,12 +45,7 @@ if (window.Telegram.WebApp) {
         container.style.backgroundColor = `#fff`
     });
 
-    window.addEventListener('click', ()=>{
-        const div = document.createElement('div')
-        div.innerText = Date.now()
-        container.append(div)
-        container.style.backgroundColor = `#fff`
-    })
+    
 
     window.addEventListener('touchstart', ()=>{
         const div = document.createElement('div')
