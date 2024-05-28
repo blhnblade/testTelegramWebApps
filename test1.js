@@ -5,6 +5,15 @@ document.body.append(div)
 const container = document.querySelector('#block')
 
 
+
+
+if (window.Telegram.WebApp) {
+// const data = JSON.stringify({
+//     eventType: 'web_app_setup_back_button',
+//     eventData: {
+//       is_visible: true,
+//     },
+// });
 window.addEventListener('click', ()=>{
     const div = document.createElement('div')
     div.innerText = Date.now()
@@ -19,15 +28,6 @@ btn.addEventListener('click', () => {
     container.append(div)
     container.style.backgroundColor = `#fff`
 })
-
-if (window.Telegram.WebApp) {
-// const data = JSON.stringify({
-//     eventType: 'web_app_setup_back_button',
-//     eventData: {
-//       is_visible: true,
-//     },
-// });
-
 
 
     // // Включаем кнопку "Назад"
