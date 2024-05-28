@@ -1,6 +1,7 @@
 console.log(123)
 console.log(window.Telegram.WebApp)
 const container = document.querySelector('#block')
+const WebApp = window.Telegram.WebApp
 // document.body.appendChild = JSON.stringify(window.Telegram.WebApp)
 WebApp.onEvent('backButtonClicked', function() {
     window.history.back();

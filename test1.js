@@ -3,12 +3,12 @@ const div = document.createElement('div')
         document.body.append(div)
 
 if (window.Telegram.WebApp) {
-const data = JSON.stringify({
-    eventType: 'web_app_setup_back_button',
-    eventData: {
-      is_visible: true,
-    },
-});
+// const data = JSON.stringify({
+//     eventType: 'web_app_setup_back_button',
+//     eventData: {
+//       is_visible: true,
+//     },
+// });
 
 
 
