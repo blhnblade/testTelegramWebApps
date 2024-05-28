@@ -24,6 +24,8 @@ const data = JSON.stringify({
     //     // Ваша логика здесь
     //     // Например, вы можете закрыть Web App или перейти на предыдущую страницу
     // });
+    const container = document.querySelector('#block')
+    
     const WebApp = window.Telegram.WebApp
     var BackButton = WebApp.BackButton;
     BackButton.show();
@@ -32,23 +34,17 @@ const data = JSON.stringify({
         WebApp.showAlert("Нет пути назад!");
         const div = document.createElement('div')
         div.innerText = Date.now()
-        document.body.append(div)
-        document.body.style.backgroundColor = `#fff`
+        container.append(div)
+        container.style.backgroundColor = `#fff`
     });
-    WebApp.onEvent('backButtonClicked', function() {
-        window.history.back();
-        const div = document.createElement('div')
-        div.innerText = Date.now()
-        document.body.append(div)
-        document.body.style.backgroundColor = `#fff`
-    });
+    
 
-    BackButton.onClick(() => {
-        window.history.back();
-        const div = document.createElement('div')
-        div.innerText = Date.now()
-        document.body.append(div)
-        document.body.style.backgroundColor = `#fff`
-    });
+    // BackButton.onClick(() => {
+    //     window.history.back();
+    //     const div = document.createElement('div')
+    //     div.innerText = Date.now()
+    //     document.body.append(div)
+    //     document.body.style.backgroundColor = `#fff`
+    // });
   
 }
