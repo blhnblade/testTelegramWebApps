@@ -28,7 +28,7 @@ const data = JSON.stringify({
     var BackButton = WebApp.BackButton;
     BackButton.show();
     BackButton.onClick(function() {
-        history.back();
+        window.history.back();
         WebApp.showAlert("Нет пути назад!");
         const div = document.createElement('div')
         div.innerText = Date.now()
@@ -36,7 +36,7 @@ const data = JSON.stringify({
         document.body.style.backgroundColor = `#fff`
     });
     WebApp.onEvent('backButtonClicked', function() {
-        history.back();
+        window.history.back();
         const div = document.createElement('div')
         div.innerText = Date.now()
         document.body.append(div)
@@ -44,7 +44,7 @@ const data = JSON.stringify({
     });
 
     BackButton.onClick(() => {
-        history.back();
+        window.history.back();
         const div = document.createElement('div')
         div.innerText = Date.now()
         document.body.append(div)
