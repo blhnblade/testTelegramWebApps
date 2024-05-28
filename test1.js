@@ -29,6 +29,10 @@ btn.addEventListener('click', () => {
     container.style.backgroundColor = `#fff`
 })
 
+const btnOtv =  document.querySelector('#btn-otv')
+btnOtv.addEventListener('click', () => {
+    BackButton.offClick(handleClick);
+})
 
     // // Включаем кнопку "Назад"
     // Telegram.WebApp.BackButton.show();
@@ -47,14 +51,7 @@ btn.addEventListener('click', () => {
     const WebApp = window.Telegram.WebApp
     var BackButton = WebApp.BackButton;
     BackButton.show();
-    BackButton.onClick(function() {
-        window.history.back();
-        // WebApp.showAlert("Нет пути назад!");
-        const div = document.createElement('div')
-        div.innerText = Date.now()
-        container.append(div)
-        container.style.backgroundColor = `#fff`
-    });
+    BackButton.onClick(handleClick);
 
     
 
@@ -74,4 +71,13 @@ btn.addEventListener('click', () => {
     //     document.body.style.backgroundColor = `#fff`
     // });
   
+}
+
+function handleClick(){
+    window.history.back();
+    // WebApp.showAlert("Нет пути назад!");
+    const div = document.createElement('div')
+    div.innerText = Date.now()
+    container.append(div)
+    container.style.backgroundColor = `#fff`
 }
